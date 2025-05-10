@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.css"
+    />
     <title>Khasna Weddings</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
@@ -15,26 +19,25 @@
         theme: {
           extend: {
             fontFamily: {
-              inter: ["Inter", "sans-serif"], // Untuk teks normal, navigasi
-              playfair: ["Playfair Display", "serif"], // Untuk judul, nama brand
+              inter: ["Inter", "sans-serif"],
+              playfair: ["Playfair Display", "serif"],
             },
             colors: {
-              "brand-gold": "#D1A45C", // rgba(209, 164, 92, 1)
-              "brand-gold-darker": "#C09350", // Sedikit lebih gelap untuk hover tombol
-              "black-khasna": "#383447", // rgba(56, 52, 71, 1)
+              "brand-gold": "#D1A45C",
+              "brand-gold-darker": "#C09350",
+              "black-khasna": "#383447",
             },
           },
         },
       };
     </script>
   </head>
-  <body class="font-inter text-black-khasna">
-    <!-- Navbar -->
-    <header class="shadow-md">
+  <body class="font-inter text-black-khasna bg-white">
+    <header class="shadow-md sticky top-0 z-50 bg-white">
       <nav
         class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center"
       >
-        <div>
+        <div data-aos="zoom-in">
           <img
             src="img/logo/Khasna-Weddings.png"
             alt="logo khasna weddings"
@@ -42,43 +45,36 @@
           />
         </div>
         <ul class="hidden md:flex space-x-8 items-center">
-          <li>
+          <li data-aos="zoom-in">
             <a
               href="#"
               class="text-brand-gold font-medium hover:text-brand-gold-darker"
               >Beranda</a
             >
           </li>
-          <li>
-            <a
-              href="#"
-              class="text-black-khasna hover:text-brand-gold font-medium"
+          <li data-aos="zoom-in">
+            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
               >Tentang</a
             >
           </li>
-          <li>
-            <a
-              href="#"
-              class="text-black-khasna hover:text-brand-gold font-medium"
+          <li data-aos="zoom-in">
+            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
               >Paket</a
             >
           </li>
-          <li>
-            <a
-              href="#"
-              class="text-black-khasna hover:text-brand-gold font-medium"
+          <li data-aos="zoom-in">
+            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
               >Galeri</a
             >
           </li>
-          <li>
-            <a
-              href="#"
-              class="text-black-khasna hover:text-brand-gold font-medium"
+          <li data-aos="zoom-in">
+            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
               >Pertanyaan</a
             >
           </li>
         </ul>
         <a
+          data-aos="zoom-in"
           href="#"
           class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center w-[99px] h-[38px] px-[18px] py-[8px] text-sm"
           >Booking</a
@@ -86,134 +82,334 @@
       </nav>
     </header>
 
-    <!-- Hero Section -->
     <section
       id="hero"
       class="container mx-auto px-4 sm:px-6 py-16 md:py-24 flex flex-col md:flex-row items-center"
     >
       <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-12">
         <h1
-          class="font-playfair text-4xl leading-tight font-bold text-black-khasna"
+          data-aos="zoom-out-right"
+          class="font-playfair text-4xl lg:text-5xl leading-tight text-black-khasna mb-6"
         >
           Let's plan your Wedding Day
         </h1>
-        <p class="text-lg text-black-khasna mb-8 leading-relaxed">
+        <p
+          data-aos="zoom-out-right"
+          class="text-lg text-black-khasna mb-8 leading-relaxed"
+        >
           Lebih dari seribu pasangan telah mewujudkan pernikahannya bersama
           kami, kini saatnya kamu dan pasanganmu
         </p>
         <a
+          data-aos="zoom-in"
           href="#"
-          class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center px-6 py-2.5 text-base transition duration-300 ease-in-out shadow-[0px_4px_20px_0px_rgba(236,196,117,0.5)]"
+          class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center px-8 py-3 text-base transition duration-300 ease-in-out shadow-[0px_4px_20px_0px_rgba(236,196,117,0.5)]"
           style="gap: 10px"
           >Booking Sekarang</a
         >
       </div>
-      <div class="image">
-        <img src="img/Gambar-pengantin.png" alt="Gambar pengantin" />
+      <div class="md:w-1/2">
+        <img
+          src="img/Gambar-pengantin.png"
+          alt="Gambar pengantin"
+          class="w-full h-full object-cover"
+        />
       </div>
     </section>
 
-    <!-- Statistik -->
     <section id="stats">
-      <h2>Kami telah mengerjakan</h2>
-      <div class="stat-list">
-        <div class="stat-item">
-          00
-          <p>Pre-Wedding</p>
-        </div>
-        <div class="stat-item">
-          00
-          <p>Engagement</p>
-        </div>
-        <div class="stat-item">
-          0000
-          <p>Weddings</p>
+      <div class="container mx-auto px-4 sm:px-6 text-center">
+        <h2
+          data-aos="fade-down"
+          data-aos-easing="linear"
+          data-aos-duration="1500"
+          class="text-3xl font-playfair font-bold text-black-khasna mb-12"
+        >
+          Kami telah mengerjakan
+        </h2>
+        <div
+          data-aos="zoom-in"
+          class="grid sm:grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          <div
+            data-aos="zoom-in"
+            class="stat-item bg-white p-8 shadow-md text-center transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <span
+              data-aos="zoom-in"
+              class="text-5xl font-bold text-brand-gold block mb-2"
+              >00</span
+            >
+            <p data-aos="zoom-in" class="text-lg text-black-khasna">
+              Pre-Wedding
+            </p>
+          </div>
+          <div
+            class="stat-item bg-white p-8 shadow-md text-center transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <span
+              data-aos="zoom-in"
+              class="text-5xl font-bold text-brand-gold block mb-2"
+              >00</span
+            >
+            <p data-aos="zoom-in" class="text-lg text-black-khasna">
+              Engagement
+            </p>
+          </div>
+          <div
+            class="stat-item bg-white p-8 shadow-md text-center transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <span
+              data-aos="zoom-in"
+              class="text-5xl font-bold text-brand-gold block mb-2"
+              >0000</span
+            >
+            <p data-aos="zoom-in" class="text-lg text-black-khasna">Weddings</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Layanan -->
-    <section id="layanan">
-      <div class="service">
-        <img src="img/preview/preview1.png" alt="Pra-Weddings" />
-        <h3>Pre-Wedding</h3>
-        <p>Make-up dan dokumentasi pra-pernikahan indoor maupun outdoor</p>
-      </div>
-      <div class="service">
-        <img src="img/preview/preview2.png" alt="Services" />
-        <h3>Engagement</h3>
-        <p>
-          Make-up, dekorasi, dan dokumentasi acara tunangan, One Step Closer
-        </p>
-      </div>
-      <div class="service">
-        <img src="img/preview/preview3.png" alt="Siraman" />
-        <h3>Siraman</h3>
-        <p>
-          Prosesi pernikahan adat jawa sehari sebelum ijab kabul / akad nikah
-        </p>
-      </div>
-      <div class="service">
-        <img src="img/preview/preview4.png" alt="Akad Nikah" />
-        <h3>Akad Nikah</h3>
-        <p>
-          Layanan dari kami untukmu yang ingin mewujudkan acara Akad Nikah saja
-        </p>
-      </div>
-      <div class="service">
-        <img src="img/preview/preview5.png" alt="Weddings" />
-        <h3>Weddings</h3>
-        <p>
-          Paket wedding lengkap dari make-up, baju, dekor, sampai
-          dokumentasi.Wujudkan hari pernikahanmu bersama kami, tersedia beberapa
-          pilihan paket
-        </p>
+    <section id="layanan" class="py-16">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="service bg-white shadow-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <img
+              data-aos="zoom-in"
+              src="img/preview/preview1.png"
+              alt="Pra-Weddings"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3
+                data-aos="zoom-in"
+                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+              >
+                Pre-Wedding
+              </h3>
+              <p
+                data-aos="zoom-in"
+                class="text-sm text-gray-700 leading-relaxed flex-grow"
+              >
+                Make-up dan dokumentasi pra-pernikahan indoor maupun outdoor
+              </p>
+            </div>
+          </div>
+          <div
+            class="service bg-white shadow-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <img
+              data-aos="zoom-in"
+              src="img/preview/preview2.png"
+              alt="Engagement"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3
+                data-aos="zoom-in"
+                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+              >
+                Engagement
+              </h3>
+              <p
+                data-aos="zoom-in"
+                class="text-sm text-gray-700 leading-relaxed flex-grow"
+              >
+                Make-up, dekorasi, dan dokumentasi acara tunangan, One Step
+                Closer
+              </p>
+            </div>
+          </div>
+          <div
+            class="service bg-white shadow-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <img
+              data-aos="zoom-in"
+              src="img/preview/preview3.png"
+              alt="Siraman"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3
+                data-aos="zoom-in"
+                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+              >
+                Siraman
+              </h3>
+              <p
+                data-aos="zoom-in"
+                class="text-sm text-gray-700 leading-relaxed flex-grow"
+              >
+                Prosesi pernikahan adat jawa sehari sebelum ijab kabul / akad
+                nikah
+              </p>
+            </div>
+          </div>
+          <div
+            class="service bg-white shadow-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <img
+              data-aos="zoom-in"
+              src="img/preview/preview4.png"
+              alt="Akad Nikah"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3
+                data-aos="zoom-in"
+                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+              >
+                Akad Nikah
+              </h3>
+              <p
+                data-aos="zoom-in"
+                class="text-sm text-gray-700 leading-relaxed flex-grow"
+              >
+                Layanan dari kami untukmu yang ingin mewujudkan acara Akad Nikah
+                saja
+              </p>
+            </div>
+          </div>
+          <div
+            class="service bg-white shadow-lg overflow-hidden flex flex-col transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <img
+              data-aos="zoom-in"
+              src="img/preview/preview5.png"
+              alt="Weddings"
+              class="w-full h-56 object-cover"
+            />
+            <div class="p-6 flex flex-col flex-grow">
+              <h3
+                data-aos="zoom-in"
+                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+              >
+                Weddings
+              </h3>
+              <p
+                data-aos="zoom-in"
+                class="text-sm text-gray-700 leading-relaxed flex-grow"
+              >
+                Paket wedding lengkap dari make-up, baju, dekor, sampai
+                dokumentasi.Wujudkan hari pernikahanmu bersama kami, tersedia
+                beberapa pilihan paket
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Cara Kerja -->
-    <section>
-      <div>
-        <h2>Bagaimana Cara Kerjanya?</h2>
-        <p>Berikut adalah 4 langkah menggunakan jasa kami</p>
-
-        <div>
-          <!-- Langkah 1 -->
-          <div>
-            <div>1</div>
-            <img src="img/cara-kerja/chatting.png" alt="Icon Chatting" />
-            <h3>Chatting</h3>
-            <p>
+    <section id="cara-kerja" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 text-center">
+        <h2
+          data-aos="fade-right"
+          class="text-3xl font-playfair font-bold text-brand-gold text-left mb-4"
+        >
+          Bagaimana Cara Kerjanya?
+        </h2>
+        <p
+          data-aos="fade-right"
+          class="text-lg text-black-khasna text-left mb-12"
+        >
+          Berikut adalah 4 langkah menggunakan jasa kami
+        </p>
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left"
+        >
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-6 shadow-lg flex flex-col items-center text-center transition-all duration-500 ease-in-out hover:shadow-xl hover:scale-200 hover:-translate-y-1"
+          >
+            <div
+              class="text-3xl font-bold text-brand-gold bg-brand-gold bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-md"
+            >
+              1
+            </div>
+            <img
+              src="img/cara-kerja/chatting.png"
+              alt="Icon Chatting"
+              class="h-24 mb-6"
+            />
+            <h3
+              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+            >
+              Chatting
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
               Hubungi nomor whatsapp kami, tanya jawab dan diskusi tentang
               kebutuhan acaramu
             </p>
           </div>
-
-          <!-- Langkah 2 -->
-          <div>
-            <div>2</div>
-            <img src="img//cara-kerja/Booking.png" alt="Icon Booking" />
-            <h3>Booking</h3>
-            <p>Pembayaran uang muka untuk keep tanggal acaramu</p>
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-6 shadow-lg flex flex-col items-center text-center transition-all duration-500 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <div
+              class="text-3xl font-bold text-brand-gold bg-brand-gold bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-md"
+            >
+              2
+            </div>
+            <img
+              src="img/cara-kerja/Booking.png"
+              alt="Icon Booking"
+              class="h-24 mb-6"
+            />
+            <h3
+              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+            >
+              Booking
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Pembayaran uang muka untuk keep tanggal acaramu
+            </p>
           </div>
-
-          <!-- Langkah 3 -->
-          <div>
-            <div>3</div>
-            <img src="img/cara-kerja/Fitting.png" alt="Icon Fitting" />
-            <h3>Fitting</h3>
-            <p>
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-6 shadow-lg flex flex-col items-center text-center transition-all duration-500 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <div
+              class="text-3xl font-bold text-brand-gold bg-brand-gold bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-md"
+            >
+              3
+            </div>
+            <img
+              src="img/cara-kerja/Fitting.png"
+              alt="Icon Fitting"
+              class="h-24 mb-6"
+            />
+            <h3
+              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+            >
+              Fitting
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
               Datang ke galeri untuk fitting, konfirmasi data dan semua
               kebutuhan acaramu
             </p>
           </div>
-
-          <!-- Langkah 4 -->
-          <div>
-            <div>4</div>
-            <img src="img/cara-kerja/Weddings.png" alt="Icon Weddings" />
-            <h3>Weddings</h3>
-            <p>
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-6 shadow-lg flex flex-col items-center text-center transition-all duration-500 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1"
+          >
+            <div
+              class="text-3xl font-bold text-brand-gold bg-brand-gold bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-md"
+            >
+              4
+            </div>
+            <img
+              src="img/cara-kerja/Weddings.png"
+              alt="Icon Weddings"
+              class="h-24 mb-6"
+            />
+            <h3
+              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+            >
+              Weddings
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
               Yeay! akhirnya hari bahagiamu telah tiba, semoga semua lancar dan
               selalu bahagia yaa..
             </p>
@@ -222,126 +418,273 @@
       </div>
     </section>
 
-    <!-- Testimoni -->
-    <section>
-      <div>
-        <h2>Pengalaman Mereka</h2>
-        <p>menggunakan layanan dari kami</p>
-        <a href="#">lihat testimoni lain</a>
+    <section id="testimoni" class="py-16">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <h2
+            data-aos="fade-right"
+            class="text-3xl font-playfair font-bold text-brand-gold text-left mb-4"
+          >
+            Pengalaman Mereka
+          </h2>
+          <p
+            data-aos="fade-right"
+            class="text-lg text-black-khasna text-left mb-4"
+          >
+            menggunakan layanan dari kami
+          </p>
+        </div>
 
-        <div>
-          <!-- Testimoni 1 -->
-          <div>
-            <p>
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-8 shadow-xl flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 hover:-translate-y-1.5 cursor-pointer"
+          >
+            <p
+              data-aos="zoom-in"
+              class="text-gray-700 italic mb-6 flex-grow text-center md:text-left"
+            >
               “Aku sampe buat orang2 pda pangling, Makeupnya bagus bgt, soft
               trus awet sampe sore, bner2 ga kecewa pake jasa khasna weddings”.
             </p>
-            <div>
-              <img src="img/testimoni/irma.png" alt="Foto Irma" />
+            <div
+              class="flex items-center mt-auto pt-4 border-t border-gray-200"
+            >
+              <img
+                data-aos="zoom-in"
+                src="img/testimoni/irma.png"
+                alt="Foto Irma"
+                class="w-14 h-14 rounded-full mr-4 object-cover"
+              />
               <div>
-                <strong>Irma</strong>
-                <p>Beji, Purbalingga</p>
+                <strong
+                  data-aos="zoom-in"
+                  class="text-black-khasna font-playfair text-lg"
+                  >Irma</strong
+                >
+                <p data-aos="zoom-in" class="text-sm text-gray-500">
+                  Beji, Purbalingga
+                </p>
               </div>
             </div>
           </div>
-
-          <!-- Testimoni 2 -->
-          <div>
-            <p>
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-8 shadow-xl flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 hover:-translate-y-1.5 cursor-pointer"
+          >
+            <p
+              data-aos="zoom-in"
+              class="text-gray-700 italic mb-6 flex-grow text-center md:text-left"
+            >
               “Makasih khasna weddings udah buat aku seharian jadi ratu, udah
               buat aku secantik itu.. crewnya semua baik..”
             </p>
-            <div>
-              <img src="img/testimoni/ema.png" alt="Foto Ema" />
+            <div
+              class="flex items-center mt-auto pt-4 border-t border-gray-200"
+            >
+              <img
+                data-aos="zoom-in"
+                src="img/testimoni/ema.png"
+                alt="Foto Ema"
+                class="w-14 h-14 rounded-full mr-4 object-cover"
+              />
               <div>
-                <strong>Ema</strong>
-                <p>Purwokerto</p>
+                <strong
+                  data-aos="zoom-in"
+                  class="text-black-khasna font-playfair text-lg"
+                  >Ema</strong
+                >
+                <p data-aos="zoom-in" class="text-sm text-gray-500">
+                  Purwokerto
+                </p>
               </div>
             </div>
           </div>
-
-          <!-- Testimoni 3 -->
-          <div>
-            <p>
+          <div
+            data-aos="zoom-in"
+            class="bg-white p-8 shadow-xl flex flex-col transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105 hover:-translate-y-1.5 cursor-pointer"
+          >
+            <p
+              data-aos="zoom-in"
+              class="text-gray-700 italic mb-6 flex-grow text-center md:text-left"
+            >
               “Mba eni dan tim, terima kasih banyak, sangat memuaskan sekali
               sampe tetangga pada pangkling”.
             </p>
-            <div>
-              <img src="img/testimoni/aulia.png" alt="Foto Aulia Aznah" />
+            <div
+              class="flex items-center mt-auto pt-4 border-t border-gray-200"
+            >
+              <img
+                data-aos="zoom-in"
+                src="img/testimoni/aulia.png"
+                alt="Foto Aulia Aznah"
+                class="w-14 h-14 rounded-full mr-4 object-cover"
+              />
               <div>
-                <strong>Aulia Aznah</strong>
-                <p>Pemalang</p>
+                <strong
+                  data-aos="zoom-in"
+                  class="text-black-khasna font-playfair text-lg"
+                  >Aulia Aznah</strong
+                >
+                <p data-aos="zoom-in" class="text-sm text-gray-500">Pemalang</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div>
-          <a href="#">Booking Sekarang</a>
+        <div class="text-center mt-16">
+          <a
+            data-aos="zoom-in"
+            href="#"
+            class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center px-5 py-2 text-lg transition duration-300 ease-in-out shadow-[0px_4px_20px_0px_rgba(236,196,117,0.5)]"
+            style="gap: 10px"
+            >Booking Sekarang</a
+          >
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <!-- Background footer -->
-      <img src="img/background.png" alt="background footer" />
-      <div>
-        <div>
-          <!-- Kolom Navigasi -->
+    <footer class="relative bg-black-khasna text-gray-300 pt-16 pb-8">
+      <div class="absolute inset-0 w-full h-full opacity-90">
+        <img
+          src="img/background.png"
+          alt="background footer"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="container mx-auto px-4 sm:px-6 relative">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <ul>
-              <li><a href="#">Tentang Kami</a></li>
-              <li><a href="#">Booking</a></li>
-              <li><a href="#">Testimoni</a></li>
-              <li><a href="#">Pertanyaan</a></li>
-              <li><a href="#">Ketentuan</a></li>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Booking</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Testimoni</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Pertanyaan</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Ketentuan</a
+                >
+              </li>
             </ul>
           </div>
-
           <div>
-            <ul>
-              <li><a href="#">Pre-Wedding</a></li>
-              <li><a href="#">Engagement</a></li>
-              <li><a href="#">Siraman</a></li>
-              <li><a href="#">Akad Nikah</a></li>
-              <li><a href="#">Weddings</a></li>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Pre-Wedding</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Engagement</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Siraman</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Akad Nikah</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Weddings</a
+                >
+              </li>
             </ul>
           </div>
-
           <div>
-            <ul>
-              <li><a href="#">Makeup</a></li>
-              <li><a href="#">Wardrobe</a></li>
-              <li><a href="#">Dekorasi</a></li>
-              <li><a href="#">Dokumentasi</a></li>
+            <ul class="space-y-3 text-sm">
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Makeup</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Wardrobe</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Dekorasi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-brand-gold transition-colors"
+                  >Dokumentasi</a
+                >
+              </li>
             </ul>
           </div>
-
-          <!-- Alamat dan Sosmed -->
-          <div>
-            <img src="img/logo/logo-khasna.png" alt="Logo Khasna Wedding" />
-            <div>
-              <p><strong>Alamat Kami :</strong></p>
-              <p>Jl. Raya Kalapacung RT 01 RW 01</p>
-              <p>Kec. Bobotsari, Kab. Purbalingga</p>
-              <p>53353 Central Java - Indonesia</p>
+          <div class="text-sm">
+            <div class="flex items-start mb-4">
+              <img
+                src="img/logo/logo-khasna.png"
+                alt="Logo Khasna Wedding"
+                class="h-10 mr-3 mt-1"
+              />
+              <div>
+                <p class="font-semibold text-white mb-1">Alamat Kami:</p>
+                <div class="flex flex-col text-xs">
+                  <span>Jl. Raya Kalapacung RT 01 RW 01</span>
+                  <span>Kec. Bobotsari, Kab. Purbalingga</span>
+                  <span>53353 Central Java - Indonesia</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <img src="img/logo/instagram.png" alt="Instagram Icon" />
-              <a href="#">khasna_wedding</a>
+            <div class="flex items-center space-x-2">
+              <a
+                href="#"
+                aria-label="Instagram Khasna Wedding"
+                class="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src="img/logo/instagram.png"
+                  alt="Instagram Icon"
+                  class="w-5 h-5"
+                />
+              </a>
+              <a
+                href="#"
+                class="hover:text-yellow-400 transition-colors text-xs"
+                >khasna_wedding</a
+              >
             </div>
           </div>
         </div>
-
-        <!-- Copyright -->
-        <div>
+        <hr class="my-8 border-gray-700" />
+        <div class="text-left text-xs text-gray-400">
           <p>
             Copyright © 2021 | System Icons by
-            <a href="https://icons8.com">icons8.com</a>
+            <a href="https://icons8.com" class="underline">icons8.com</a>
           </p>
         </div>
       </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
+    <script>
+      AOS.init({ duration: 1200 });
+    </script>
   </body>
 </html>
