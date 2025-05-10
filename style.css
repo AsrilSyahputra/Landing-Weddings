@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Anda sudah mendefinisikan font-family di file HTML menggunakan Tailwind config,
+   jadi .font-inter dan .font-playfair di sini mungkin tidak diperlukan lagi
+   kecuali untuk elemen yang tidak menggunakan kelas Tailwind secara langsung. */
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Styling tambahan jika ada yang tidak bisa dicapai dengan Tailwind */
+/* Contoh:
+.btn-custom-color {
+  background-color: #D2B48C;  Warna gold seperti di gambar (perkiraan)
+}
+.btn-custom-color:hover {
+  background-color: #C8A979;
+}
+.nav-link-custom {
+  color: #374151; /* Warna teks default Tailwind gray-700 */

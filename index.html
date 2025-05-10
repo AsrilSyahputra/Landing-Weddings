@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Khasna Weddings</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"], // Untuk teks normal, navigasi
+              playfair: ["Playfair Display", "serif"], // Untuk judul, nama brand
+            },
+            colors: {
+              "brand-gold": "#D1A45C", // rgba(209, 164, 92, 1)
+              "brand-gold-darker": "#C09350", // Sedikit lebih gelap untuk hover tombol
+              "black-khasna": "#383447", // rgba(56, 52, 71, 1)
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-inter text-black-khasna">
+    <!-- Navbar -->
+    <header class="shadow-md">
+      <nav
+        class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center"
+      >
+        <div>
+          <img
+            src="img/logo/Khasna-Weddings.png"
+            alt="logo khasna weddings"
+            class="h-16 md:h-16"
+          />
+        </div>
+        <ul class="hidden md:flex space-x-8 items-center">
+          <li>
+            <a
+              href="#"
+              class="text-brand-gold font-medium hover:text-brand-gold-darker"
+              >Beranda</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold font-medium"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold font-medium"
+              >Paket</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold font-medium"
+              >Galeri</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold font-medium"
+              >Pertanyaan</a
+            >
+          </li>
+        </ul>
+        <a
+          href="#"
+          class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center w-[99px] h-[38px] px-[18px] py-[8px] text-sm"
+          >Booking</a
+        >
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="container mx-auto px-4 sm:px-6 py-16 md:py-24 flex flex-col md:flex-row items-center"
+    >
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-12">
+        <h1
+          class="font-playfair text-4xl leading-tight font-bold text-black-khasna"
+        >
+          Let's plan your Wedding Day
+        </h1>
+        <p class="text-lg text-black-khasna mb-8 leading-relaxed">
+          Lebih dari seribu pasangan telah mewujudkan pernikahannya bersama
+          kami, kini saatnya kamu dan pasanganmu
+        </p>
+        <a
+          href="#"
+          class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center px-6 py-2.5 text-base transition duration-300 ease-in-out shadow-[0px_4px_20px_0px_rgba(236,196,117,0.5)]"
+          style="gap: 10px"
+          >Booking Sekarang</a
+        >
+      </div>
+      <div class="image">
+        <img src="img/Gambar-pengantin.png" alt="Gambar pengantin" />
+      </div>
+    </section>
+
+    <!-- Statistik -->
+    <section id="stats">
+      <h2>Kami telah mengerjakan</h2>
+      <div class="stat-list">
+        <div class="stat-item">
+          00
+          <p>Pre-Wedding</p>
+        </div>
+        <div class="stat-item">
+          00
+          <p>Engagement</p>
+        </div>
+        <div class="stat-item">
+          0000
+          <p>Weddings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Layanan -->
+    <section id="layanan">
+      <div class="service">
+        <img src="img/preview/preview1.png" alt="Pra-Weddings" />
+        <h3>Pre-Wedding</h3>
+        <p>Make-up dan dokumentasi pra-pernikahan indoor maupun outdoor</p>
+      </div>
+      <div class="service">
+        <img src="img/preview/preview2.png" alt="Services" />
+        <h3>Engagement</h3>
+        <p>
+          Make-up, dekorasi, dan dokumentasi acara tunangan, One Step Closer
+        </p>
+      </div>
+      <div class="service">
+        <img src="img/preview/preview3.png" alt="Siraman" />
+        <h3>Siraman</h3>
+        <p>
+          Prosesi pernikahan adat jawa sehari sebelum ijab kabul / akad nikah
+        </p>
+      </div>
+      <div class="service">
+        <img src="img/preview/preview4.png" alt="Akad Nikah" />
+        <h3>Akad Nikah</h3>
+        <p>
+          Layanan dari kami untukmu yang ingin mewujudkan acara Akad Nikah saja
+        </p>
+      </div>
+      <div class="service">
+        <img src="img/preview/preview5.png" alt="Weddings" />
+        <h3>Weddings</h3>
+        <p>
+          Paket wedding lengkap dari make-up, baju, dekor, sampai
+          dokumentasi.Wujudkan hari pernikahanmu bersama kami, tersedia beberapa
+          pilihan paket
+        </p>
+      </div>
+    </section>
+
+    <!-- Cara Kerja -->
+    <section>
+      <div>
+        <h2>Bagaimana Cara Kerjanya?</h2>
+        <p>Berikut adalah 4 langkah menggunakan jasa kami</p>
+
+        <div>
+          <!-- Langkah 1 -->
+          <div>
+            <div>1</div>
+            <img src="img/cara-kerja/chatting.png" alt="Icon Chatting" />
+            <h3>Chatting</h3>
+            <p>
+              Hubungi nomor whatsapp kami, tanya jawab dan diskusi tentang
+              kebutuhan acaramu
+            </p>
+          </div>
+
+          <!-- Langkah 2 -->
+          <div>
+            <div>2</div>
+            <img src="img//cara-kerja/Booking.png" alt="Icon Booking" />
+            <h3>Booking</h3>
+            <p>Pembayaran uang muka untuk keep tanggal acaramu</p>
+          </div>
+
+          <!-- Langkah 3 -->
+          <div>
+            <div>3</div>
+            <img src="img/cara-kerja/Fitting.png" alt="Icon Fitting" />
+            <h3>Fitting</h3>
+            <p>
+              Datang ke galeri untuk fitting, konfirmasi data dan semua
+              kebutuhan acaramu
+            </p>
+          </div>
+
+          <!-- Langkah 4 -->
+          <div>
+            <div>4</div>
+            <img src="img/cara-kerja/Weddings.png" alt="Icon Weddings" />
+            <h3>Weddings</h3>
+            <p>
+              Yeay! akhirnya hari bahagiamu telah tiba, semoga semua lancar dan
+              selalu bahagia yaa..
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section>
+      <div>
+        <h2>Pengalaman Mereka</h2>
+        <p>menggunakan layanan dari kami</p>
+        <a href="#">lihat testimoni lain</a>
+
+        <div>
+          <!-- Testimoni 1 -->
+          <div>
+            <p>
+              “Aku sampe buat orang2 pda pangling, Makeupnya bagus bgt, soft
+              trus awet sampe sore, bner2 ga kecewa pake jasa khasna weddings”.
+            </p>
+            <div>
+              <img src="img/testimoni/irma.png" alt="Foto Irma" />
+              <div>
+                <strong>Irma</strong>
+                <p>Beji, Purbalingga</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimoni 2 -->
+          <div>
+            <p>
+              “Makasih khasna weddings udah buat aku seharian jadi ratu, udah
+              buat aku secantik itu.. crewnya semua baik..”
+            </p>
+            <div>
+              <img src="img/testimoni/ema.png" alt="Foto Ema" />
+              <div>
+                <strong>Ema</strong>
+                <p>Purwokerto</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimoni 3 -->
+          <div>
+            <p>
+              “Mba eni dan tim, terima kasih banyak, sangat memuaskan sekali
+              sampe tetangga pada pangkling”.
+            </p>
+            <div>
+              <img src="img/testimoni/aulia.png" alt="Foto Aulia Aznah" />
+              <div>
+                <strong>Aulia Aznah</strong>
+                <p>Pemalang</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a href="#">Booking Sekarang</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <!-- Background footer -->
+      <img src="img/background.png" alt="background footer" />
+      <div>
+        <div>
+          <!-- Kolom Navigasi -->
+          <div>
+            <ul>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Booking</a></li>
+              <li><a href="#">Testimoni</a></li>
+              <li><a href="#">Pertanyaan</a></li>
+              <li><a href="#">Ketentuan</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <ul>
+              <li><a href="#">Pre-Wedding</a></li>
+              <li><a href="#">Engagement</a></li>
+              <li><a href="#">Siraman</a></li>
+              <li><a href="#">Akad Nikah</a></li>
+              <li><a href="#">Weddings</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <ul>
+              <li><a href="#">Makeup</a></li>
+              <li><a href="#">Wardrobe</a></li>
+              <li><a href="#">Dekorasi</a></li>
+              <li><a href="#">Dokumentasi</a></li>
+            </ul>
+          </div>
+
+          <!-- Alamat dan Sosmed -->
+          <div>
+            <img src="img/logo/logo-khasna.png" alt="Logo Khasna Wedding" />
+            <div>
+              <p><strong>Alamat Kami :</strong></p>
+              <p>Jl. Raya Kalapacung RT 01 RW 01</p>
+              <p>Kec. Bobotsari, Kab. Purbalingga</p>
+              <p>53353 Central Java - Indonesia</p>
+            </div>
+            <div>
+              <img src="img/logo/instagram.png" alt="Instagram Icon" />
+              <a href="#">khasna_wedding</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div>
+          <p>
+            Copyright © 2021 | System Icons by
+            <a href="https://icons8.com">icons8.com</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
