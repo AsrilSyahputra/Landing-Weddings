@@ -82,48 +82,48 @@
       </nav>
     </header>
 
-    <section
-      id="hero"
-      class="container mx-auto px-4 sm:px-6 py-16 md:py-24 flex flex-col md:flex-row items-center"
-    >
-      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 md:pr-12">
-        <h1
-          data-aos="zoom-out-right"
-          class="font-playfair text-4xl lg:text-5xl leading-tight text-black-khasna mb-6"
-        >
-          Let's plan your Wedding Day
-        </h1>
-        <p
-          data-aos="zoom-out-right"
-          class="text-lg text-black-khasna mb-8 leading-relaxed"
-        >
-          Lebih dari seribu pasangan telah mewujudkan pernikahannya bersama
-          kami, kini saatnya kamu dan pasanganmu
-        </p>
-        <a
-          data-aos="zoom-in"
-          href="#"
-          class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center px-8 py-3 text-base transition duration-300 ease-in-out shadow-[0px_4px_20px_0px_rgba(236,196,117,0.5)]"
-          style="gap: 10px"
-          >Booking Sekarang</a
-        >
-      </div>
-      <div class="md:w-1/2">
+    <section id="hero" class="relative w-full overflow-hidden">
+      <div class="absolute inset-0 z-0">
         <img
           src="img/Gambar-pengantin.png"
           alt="Gambar pengantin"
           class="w-full h-full object-cover"
         />
+        <div class="absolute inset-0 bg-black bg-opacity-0"></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto px-4 sm:px-6 py-24 md:py-32 flex items-center"
+      >
+        <div class="md:w-1/2 text-center md:text-left">
+          <h1
+            data-aos="zoom-out-right"
+            class="font-playfair text-4xl lg:text-5xl leading-tight mb-5"
+          >
+            Let's plan your Wedding Day
+          </h1>
+          <p data-aos="zoom-out-right" class="text-lg mb-8 leading-relaxed">
+            Lebih dari seribu pasangan telah mewujudkan pernikahannya bersama
+            kami, kini saatnya kamu dan pasanganmu
+          </p>
+          <a
+            data-aos="zoom-in"
+            href="#"
+            class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center px-8 py-3 text-base transition duration-300 ease-in-out shadow-lg"
+            style="gap: 10px"
+            >Booking Sekarang</a
+          >
+        </div>
       </div>
     </section>
 
-    <section id="stats">
+    <section id="stats" class="relative -mt-16 md:-mt-24 lg:-mt-32">
       <div class="container mx-auto px-4 sm:px-6 text-center">
         <h2
           data-aos="fade-down"
           data-aos-easing="linear"
           data-aos-duration="1500"
-          class="text-3xl font-playfair font-bold text-black-khasna mb-12"
+          class="text-3xl font-playfair font-bold text-brand-gold mb-12"
         >
           Kami telah mengerjakan
         </h2>
@@ -185,7 +185,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3
                 data-aos="zoom-in"
-                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+                class="text-xl font-playfair font-semibold text-brand-gold mb-2"
               >
                 Pre-Wedding
               </h3>
@@ -209,7 +209,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3
                 data-aos="zoom-in"
-                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+                class="text-xl font-playfair font-semibold text-brand-gold mb-2"
               >
                 Engagement
               </h3>
@@ -234,7 +234,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3
                 data-aos="zoom-in"
-                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+                class="text-xl font-playfair font-semibold text-brand-gold mb-2"
               >
                 Siraman
               </h3>
@@ -259,7 +259,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3
                 data-aos="zoom-in"
-                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+                class="text-xl font-playfair font-semibold text-brand-gold mb-2"
               >
                 Akad Nikah
               </h3>
@@ -284,7 +284,7 @@
             <div class="p-6 flex flex-col flex-grow">
               <h3
                 data-aos="zoom-in"
-                class="text-xl font-playfair font-semibold text-black-khasna mb-2"
+                class="text-xl font-playfair font-semibold text-brand-gold mb-2"
               >
                 Weddings
               </h3>
@@ -334,7 +334,7 @@
               class="h-24 mb-6"
             />
             <h3
-              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+              class="text-xl font-playfair font-semibold text-brand-gold mb-3"
             >
               Chatting
             </h3>
@@ -358,7 +358,7 @@
               class="h-24 mb-6"
             />
             <h3
-              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+              class="text-xl font-playfair font-semibold text-brand-gold mb-3"
             >
               Booking
             </h3>
@@ -381,7 +381,7 @@
               class="h-24 mb-6"
             />
             <h3
-              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+              class="text-xl font-playfair font-semibold text-brand-gold mb-3"
             >
               Fitting
             </h3>
@@ -405,7 +405,7 @@
               class="h-24 mb-6"
             />
             <h3
-              class="text-xl font-playfair font-semibold text-black-khasna mb-3"
+              class="text-xl font-playfair font-semibold text-brand-gold mb-3"
             >
               Weddings
             </h3>
@@ -459,7 +459,7 @@
               <div>
                 <strong
                   data-aos="zoom-in"
-                  class="text-black-khasna font-playfair text-lg"
+                  class="text-brand-gold font-playfair text-lg"
                   >Irma</strong
                 >
                 <p data-aos="zoom-in" class="text-sm text-gray-500">
@@ -491,7 +491,7 @@
               <div>
                 <strong
                   data-aos="zoom-in"
-                  class="text-black-khasna font-playfair text-lg"
+                  class="text-brand-gold font-playfair text-lg"
                   >Ema</strong
                 >
                 <p data-aos="zoom-in" class="text-sm text-gray-500">
@@ -523,7 +523,7 @@
               <div>
                 <strong
                   data-aos="zoom-in"
-                  class="text-black-khasna font-playfair text-lg"
+                  class="text-brand-gold font-playfair text-lg"
                   >Aulia Aznah</strong
                 >
                 <p data-aos="zoom-in" class="text-sm text-gray-500">Pemalang</p>
