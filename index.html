@@ -31,6 +31,23 @@
         },
       };
     </script>
+    <style>
+      /* Optional: Add a transition for the mobile menu */
+      #mobile-menu {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+      #mobile-menu.hidden {
+        transform: translateY(
+          -10px
+        ); /* Example starting position for a subtle animation */
+        opacity: 0;
+        pointer-events: none;
+      }
+      /* Style for body when mobile menu is open to prevent scrolling */
+      .body-no-scroll {
+        overflow: hidden;
+      }
+    </style>
   </head>
   <body class="font-inter text-black-khasna bg-white">
     <header class="shadow-md sticky top-0 z-50 bg-white">
@@ -41,45 +58,146 @@
           <img
             src="img/logo/Khasna-Weddings.png"
             alt="logo khasna weddings"
-            class="h-16 md:h-16"
+            class="h-16"
           />
         </div>
-        <ul class="hidden md:flex space-x-8 items-center">
-          <li data-aos="zoom-in">
+
+        <div class="hidden md:flex items-center space-x-6 lg:space-x-8">
+          <ul class="flex space-x-6 lg:space-x-8 items-center">
+            <li data-aos="zoom-in">
+              <a
+                href="#"
+                class="text-brand-gold font-medium hover:text-brand-gold-darker"
+                >Beranda</a
+              >
+            </li>
+            <li data-aos="zoom-in">
+              <a
+                href="#"
+                class="text-black-khasna hover:text-brand-gold text-sm"
+                >Tentang</a
+              >
+            </li>
+            <li data-aos="zoom-in">
+              <a
+                href="#"
+                class="text-black-khasna hover:text-brand-gold text-sm"
+                >Paket</a
+              >
+            </li>
+            <li data-aos="zoom-in">
+              <a
+                href="#"
+                class="text-black-khasna hover:text-brand-gold text-sm"
+                >Galeri</a
+              >
+            </li>
+            <li data-aos="zoom-in">
+              <a
+                href="#"
+                class="text-black-khasna hover:text-brand-gold text-sm"
+                >Pertanyaan</a
+              >
+            </li>
+          </ul>
+          <a
+            data-aos="zoom-in"
+            href="#"
+            class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center w-auto h-[38px] px-5 py-2 text-sm whitespace-nowrap"
+            >Booking</a
+          >
+        </div>
+
+        <div class="md:hidden flex items-center">
+          <button
+            id="menu-btn"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            class="text-black-khasna hover:text-brand-gold focus:outline-none"
+          >
+            <svg
+              id="menu-open-icon"
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              id="menu-close-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white shadow-lg absolute top-full left-0 right-0 z-40 pb-4"
+      >
+        <ul class="flex flex-col items-center pt-2 pb-3 space-y-2">
+          <li>
             <a
               href="#"
-              class="text-brand-gold font-medium hover:text-brand-gold-darker"
+              class="text-brand-gold font-medium hover:text-brand-gold-darker block px-4 py-2"
               >Beranda</a
             >
           </li>
-          <li data-aos="zoom-in">
-            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold text-sm block px-4 py-2"
               >Tentang</a
             >
           </li>
-          <li data-aos="zoom-in">
-            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold text-sm block px-4 py-2"
               >Paket</a
             >
           </li>
-          <li data-aos="zoom-in">
-            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold text-sm block px-4 py-2"
               >Galeri</a
             >
           </li>
-          <li data-aos="zoom-in">
-            <a href="#" class="text-black-khasna hover:text-brand-gold text-sm"
+          <li>
+            <a
+              href="#"
+              class="text-black-khasna hover:text-brand-gold text-sm block px-4 py-2"
               >Pertanyaan</a
             >
           </li>
         </ul>
-        <a
-          data-aos="zoom-in"
-          href="#"
-          class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium inline-flex items-center justify-center w-[99px] h-[38px] px-[18px] py-[8px] text-sm"
-          >Booking</a
-        >
-      </nav>
+        <div class="mt-2 px-4">
+          <a
+            href="#"
+            class="bg-brand-gold hover:bg-brand-gold-darker text-white font-medium w-full inline-flex items-center justify-center px-6 py-2 text-sm"
+            >Booking</a
+          >
+        </div>
+      </div>
     </header>
 
     <section id="hero" class="relative w-full overflow-hidden">
@@ -181,6 +299,7 @@
               src="img/preview/preview1.png"
               alt="Pra-Weddings"
               class="w-full h-56 object-cover"
+              loading="lazy"
             />
             <div class="p-6 flex flex-col flex-grow">
               <h3
@@ -205,6 +324,7 @@
               src="img/preview/preview2.png"
               alt="Engagement"
               class="w-full h-56 object-cover"
+              loading="lazy"
             />
             <div class="p-6 flex flex-col flex-grow">
               <h3
@@ -230,6 +350,7 @@
               src="img/preview/preview3.png"
               alt="Siraman"
               class="w-full h-56 object-cover"
+              loading="lazy"
             />
             <div class="p-6 flex flex-col flex-grow">
               <h3
@@ -255,6 +376,7 @@
               src="img/preview/preview4.png"
               alt="Akad Nikah"
               class="w-full h-56 object-cover"
+              loading="lazy"
             />
             <div class="p-6 flex flex-col flex-grow">
               <h3
@@ -280,6 +402,7 @@
               src="img/preview/preview5.png"
               alt="Weddings"
               class="w-full h-56 object-cover"
+              loading="lazy"
             />
             <div class="p-6 flex flex-col flex-grow">
               <h3
@@ -321,7 +444,7 @@
         >
           <div
             data-aos="zoom-in"
-            class="bg-white p-6 shadow-lg flex flex-col items-center text-center transition-all duration-500 ease-in-out hover:shadow-xl hover:scale-200 hover:-translate-y-1 cursor-pointer"
+            class="bg-white p-6 shadow-lg flex flex-col items-center text-center transition-all duration-500 ease-in-out hover:shadow-xl hover:scale-105 hover:-translate-y-1 cursor-pointer"
           >
             <div
               class="text-3xl font-bold text-brand-gold bg-brand-gold bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-md"
@@ -332,6 +455,7 @@
               src="img/cara-kerja/chatting.png"
               alt="Icon Chatting"
               class="h-24 mb-6"
+              loading="lazy"
             />
             <h3
               class="text-xl font-playfair font-semibold text-brand-gold mb-3"
@@ -356,6 +480,7 @@
               src="img/cara-kerja/Booking.png"
               alt="Icon Booking"
               class="h-24 mb-6"
+              loading="lazy"
             />
             <h3
               class="text-xl font-playfair font-semibold text-brand-gold mb-3"
@@ -379,6 +504,7 @@
               src="img/cara-kerja/Fitting.png"
               alt="Icon Fitting"
               class="h-24 mb-6"
+              loading="lazy"
             />
             <h3
               class="text-xl font-playfair font-semibold text-brand-gold mb-3"
@@ -403,6 +529,7 @@
               src="img/cara-kerja/Weddings.png"
               alt="Icon Weddings"
               class="h-24 mb-6"
+              loading="lazy"
             />
             <h3
               class="text-xl font-playfair font-semibold text-brand-gold mb-3"
@@ -455,6 +582,7 @@
                 src="img/testimoni/irma.png"
                 alt="Foto Irma"
                 class="w-14 h-14 rounded-full mr-4 object-cover"
+                loading="lazy"
               />
               <div>
                 <strong
@@ -487,6 +615,7 @@
                 src="img/testimoni/ema.png"
                 alt="Foto Ema"
                 class="w-14 h-14 rounded-full mr-4 object-cover"
+                loading="lazy"
               />
               <div>
                 <strong
@@ -519,6 +648,7 @@
                 src="img/testimoni/aulia.png"
                 alt="Foto Aulia Aznah"
                 class="w-14 h-14 rounded-full mr-4 object-cover"
+                loading="lazy"
               />
               <div>
                 <strong
@@ -550,6 +680,7 @@
           src="img/background.png"
           alt="background footer"
           class="w-full h-full object-cover"
+          loading="lazy"
         />
       </div>
       <div class="container mx-auto px-4 sm:px-6 relative">
@@ -642,6 +773,7 @@
                 src="img/logo/logo-khasna.png"
                 alt="Logo Khasna Wedding"
                 class="h-10 mr-3 mt-1"
+                loading="lazy"
               />
               <div>
                 <p class="font-semibold text-white mb-1">Alamat Kami:</p>
@@ -662,6 +794,7 @@
                   src="img/logo/instagram.png"
                   alt="Instagram Icon"
                   class="w-5 h-5"
+                  loading="lazy"
                 />
               </a>
               <a
@@ -684,7 +817,78 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.min.js"></script>
     <script>
-      AOS.init({ duration: 1200 });
+      AOS.init({ duration: 1200, once: true }); // Added once: true to prevent re-animation on scroll up
+    </script>
+
+    <script>
+      // Custom JavaScript for Responsive Enhancements
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuOpenIcon = document.getElementById("menu-open-icon");
+        const menuCloseIcon = document.getElementById("menu-close-icon");
+
+        if (menuBtn && mobileMenu && menuOpenIcon && menuCloseIcon) {
+          menuBtn.addEventListener("click", () => {
+            const isMenuOpen = mobileMenu.classList.toggle("hidden");
+            menuOpenIcon.classList.toggle("hidden", isMenuOpen);
+            menuCloseIcon.classList.toggle("hidden", !isMenuOpen);
+            menuBtn.setAttribute(
+              "aria-expanded",
+              isMenuOpen ? "false" : "true"
+            );
+
+            if (!isMenuOpen) {
+              // If menu is now open (hidden class removed)
+              document.body.classList.add("body-no-scroll");
+            } else {
+              // If menu is now closed (hidden class added)
+              document.body.classList.remove("body-no-scroll");
+            }
+          });
+
+          const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+          mobileMenuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.add("hidden");
+              menuOpenIcon.classList.remove("hidden");
+              menuCloseIcon.classList.add("hidden");
+              menuBtn.setAttribute("aria-expanded", "false");
+              document.body.classList.remove("body-no-scroll");
+            });
+          });
+
+          // Optional: Close mobile menu when clicking outside of it
+          document.addEventListener("click", (event) => {
+            const isClickInsideMenu = mobileMenu.contains(event.target);
+            const isClickOnMenuButton = menuBtn.contains(event.target);
+
+            if (
+              !isClickInsideMenu &&
+              !isClickOnMenuButton &&
+              !mobileMenu.classList.contains("hidden")
+            ) {
+              mobileMenu.classList.add("hidden");
+              menuOpenIcon.classList.remove("hidden");
+              menuCloseIcon.classList.add("hidden");
+              menuBtn.setAttribute("aria-expanded", "false");
+              document.body.classList.remove("body-no-scroll");
+            }
+          });
+        }
+
+        // Example: Dynamic adjustment based on screen size (adjust as needed)
+        // function adjustLayout() {
+        //   if (window.innerWidth < 768) {
+        //     // console.log('Small screen adjustments can be made here.');
+        //     // e.g., change text, hide/show specific non-Tailwind elements
+        //   } else {
+        //     // console.log('Larger screen adjustments.');
+        //   }
+        // }
+        // window.addEventListener('resize', adjustLayout);
+        // adjustLayout(); // Initial call
+      });
     </script>
   </body>
 </html>
